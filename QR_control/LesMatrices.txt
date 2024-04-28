@@ -1,0 +1,30 @@
+Matrixs for leg part
+P_ans:
+[ cos(t1)/5 + (4*cos(t2)*sin(t1))/5 - (4*sin(t1)*sin(t2)*sin(t3))/5 + (4*cos(t2)*cos(t3)*sin(t1))/5;sin(t1)/5 - (4*cos(t1)*cos(t2))/5 + (4*cos(t1)*sin(t2)*sin(t3))/5 - (4*cos(t1)*cos(t2)*cos(t3))/5;- (4*sin(t2 + t3))/5 - (4*sin(t2))/5;
+]
+q_des:
+[ atan2(y/5 + x*abs(x^2 + y^2 - 1/25)^(1/2), x/5 - y*abs(x^2 + y^2 - 1/25)^(1/2));-asin((z + (4*(1 - (625*(x^2 + y^2 + z^2 - 33/25)^2)/1024)^(1/2)*(y - (real(x*(x^2 + y^2 - 1/25)^(1/2)) - imag(y*(x^2 + y^2 - 1/25)^(1/2)) + imag(x)/5 + real(y)/5)/(5*abs(x/5 + (y*1i)/5 + x*(x^2 + y^2 - 1/25)^(1/2)*1i - y*(x^2 + y^2 - 1/25)^(1/2)))))/(5*((4*(imag(x*(x^2 + y^2 - 1/25)^(1/2)) + real(y*(x^2 + y^2 - 1/25)^(1/2)) + imag(y)/5 - real(x)/5))/(5*abs(x/5 + (y*1i)/5 + x*(x^2 + y^2 - 1/25)^(1/2)*1i - y*(x^2 + y^2 - 1/25)^(1/2))) + (5*(imag(x*(x^2 + y^2 - 1/25)^(1/2)) + real(y*(x^2 + y^2 - 1/25)^(1/2)) + imag(y)/5 - real(x)/5)*(x^2 + y^2 + z^2 - 33/25))/(8*abs(x/5 + (y*1i)/5 + x*(x^2 + y^2 - 1/25)^(1/2)*1i - y*(x^2 + y^2 - 1/25)^(1/2))))))/((5*x^2)/8 + (5*y^2)/8 + (5*z^2)/8 - (16*((625*(x^2 + y^2 + z^2 - 33/25)^2)/1024 - 1)*(imag(x*(x^2 + y^2 - 1/25)^(1/2)) + real(y*(x^2 + y^2 - 1/25)^(1/2)) + imag(y)/5 - real(x)/5))/(25*abs(x/5 + (y*1i)/5 + x*(x^2 + y^2 - 1/25)^(1/2)*1i - y*(x^2 + y^2 - 1/25)^(1/2))*((4*(imag(x*(x^2 + y^2 - 1/25)^(1/2)) + real(y*(x^2 + y^2 - 1/25)^(1/2)) + imag(y)/5 - real(x)/5))/(5*abs(x/5 + (y*1i)/5 + x*(x^2 + y^2 - 1/25)^(1/2)*1i - y*(x^2 + y^2 - 1/25)^(1/2))) + (5*(imag(x*(x^2 + y^2 - 1/25)^(1/2)) + real(y*(x^2 + y^2 - 1/25)^(1/2)) + imag(y)/5 - real(x)/5)*(x^2 + y^2 + z^2 - 33/25))/(8*abs(x/5 + (y*1i)/5 + x*(x^2 + y^2 - 1/25)^(1/2)*1i - y*(x^2 + y^2 - 1/25)^(1/2))))) - 1/40));pi - acos(33/32 - (25*y^2)/32 - (25*z^2)/32 - (25*x^2)/32);
+]
+J:
+[ (4*cos(conj(t1))*cos(conj(t2)))/5 - sin(conj(t1))/5 + (4*cos(conj(t1))*cos(conj(t2))*cos(conj(t3)))/5 - (4*cos(conj(t1))*sin(conj(t2))*sin(conj(t3)))/5,- (4*sin(conj(t1))*sin(conj(t2)))/5 - (4*cos(conj(t2))*sin(conj(t1))*sin(conj(t3)))/5 - (4*cos(conj(t3))*sin(conj(t1))*sin(conj(t2)))/5,- (4*cos(conj(t2))*sin(conj(t1))*sin(conj(t3)))/5 - (4*cos(conj(t3))*sin(conj(t1))*sin(conj(t2)))/5;
+cos(conj(t1))/5 + (4*cos(conj(t2))*sin(conj(t1)))/5 + (4*cos(conj(t2))*cos(conj(t3))*sin(conj(t1)))/5 - (4*sin(conj(t1))*sin(conj(t2))*sin(conj(t3)))/5,(4*cos(conj(t1))*sin(conj(t2)))/5 + (4*cos(conj(t1))*cos(conj(t2))*sin(conj(t3)))/5 + (4*cos(conj(t1))*cos(conj(t3))*sin(conj(t2)))/5,(4*cos(conj(t1))*cos(conj(t2))*sin(conj(t3)))/5 + (4*cos(conj(t1))*cos(conj(t3))*sin(conj(t2)))/5;
+0,- (4*cos(conj(t2)))/5 - (4*cos(conj(t2) + conj(t3)))/5,-(4*cos(conj(t2) + conj(t3)))/5;
+]
+torques:
+[ fx*(sin(t1)/5 - (4*cos(t1)*cos(t2))/5 + (4*cos(t1)*sin(t2)*sin(t3))/5 - (4*cos(t1)*cos(t2)*cos(t3))/5) - fy*(cos(t1)/5 + (4*cos(t2)*sin(t1))/5 - (4*sin(t1)*sin(t2)*sin(t3))/5 + (4*cos(t2)*cos(t3)*sin(t1))/5);fx*((4*sin(t1)*sin(t2))/5 + (4*cos(t2)*sin(t1)*sin(t3))/5 + (4*cos(t3)*sin(t1)*sin(t2))/5) - fy*((4*cos(t1)*sin(t2))/5 + (4*cos(t1)*cos(t2)*sin(t3))/5 + (4*cos(t1)*cos(t3)*sin(t2))/5) + fz*((4*cos(t2 + t3))/5 + (4*cos(t2))/5);(4*fx*(cos(t2)*sin(t1)*sin(t3) + cos(t3)*sin(t1)*sin(t2)))/5 - (4*fy*(cos(t1)*cos(t2)*sin(t3) + cos(t1)*cos(t3)*sin(t2)))/5 + (4*fz*cos(t2 + t3))/5;
+]
+Matrixs for body part
+A:
+[ zeros(3,3),eye(3),zeros(3,3),zeros(3,3),zeros(3,1);
+zeros(3,3),zeros(3,3),zeros(3,3),zeros(3,3),[0;-1;0];
+zeros(3,3),zeros(3,3),zeros(3,3),Rsb,zeros(3,1);
+zeros(3,3),zeros(3,3),zeros(3,3),zeros(3,3),zeros(1,3);
+zeros(1,3),zeros(1,3),zeros(1,3),zeros(1,3),zeros(1,3);
+]
+B:
+[ zeros(3,3),zeros(3,3),zeros(3,3),zeros(3,3);
+eye(3)/m,eye(3)/m,eye(3)/m,eye(3)/m;
+zeros(3,3),zeros(3,3),zeros(3,3),zeros(3,3);
+(Rsb*Ib*Rsb')\ PRRx,(Rsb*Ib*Rsb')\ PRFx,(Rsb*Ib*Rsb')\ PLRx,(Rsb*Ib*Rsb')\ PLFx;
+zeros(1,3),zeros(1,3),zeros(1,3),zeros(1,3);
+]

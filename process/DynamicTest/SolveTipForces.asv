@@ -1,0 +1,12 @@
+function fRR,fRF,fLR,fLF = SolveTipForces(ddp,m)
+g = [0;-10;0];
+f_tol = m * (ddp + g);
+
+S = [1 0 0;
+     0 1 0;
+     0 0 1];
+W = diag(ones(1,12));
+
+A = [eye(3),eye(3),eye(3),eye(3)];
+
+
